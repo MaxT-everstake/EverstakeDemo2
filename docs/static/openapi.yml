@@ -34164,6 +34164,42 @@ paths:
           format: int64
       tags:
         - Query
+  /Everstake_demo2/dex/params:
+    get:
+      summary: Parameters queries the parameters of the module.
+      operationId: EverstakeDemo2DexParams
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              params:
+                description: params holds all the parameters of this module.
+                type: object
+            description: >-
+              QueryParamsResponse is response type for the Query/Params RPC
+              method.
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    '@type':
+                      type: string
+                  additionalProperties: {}
+      tags:
+        - Query
   /Everstake_demo2/everstakedemo2/params:
     get:
       summary: Parameters queries the parameters of the module.
@@ -70397,6 +70433,16 @@ definitions:
             NOTE: The amount field is an Int which implements the custom method
             signatures required by gogoproto.
     description: Period defines a length of time and amount of coins that will vest.
+  everstake_demo2.dex.Params:
+    type: object
+    description: Params defines the parameters for the module.
+  everstake_demo2.dex.QueryParamsResponse:
+    type: object
+    properties:
+      params:
+        description: params holds all the parameters of this module.
+        type: object
+    description: QueryParamsResponse is response type for the Query/Params RPC method.
   everstake_demo2.everstakedemo2.Params:
     type: object
     description: Params defines the parameters for the module.
