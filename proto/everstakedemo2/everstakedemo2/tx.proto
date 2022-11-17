@@ -1,0 +1,13 @@
+syntax = "proto3";
+package everstake_demo2.everstakedemo2;
+
+// this line is used by starport scaffolding # proto/tx/import
+
+option go_package = "Everstake_demo2/x/everstakedemo2/types";
+
+// Msg defines the Msg service.
+service Msg {
+    // this line is used by starport scaffolding # proto/tx/rpc
+}
+
+// this line is used by starport scaffolding # proto/tx/message

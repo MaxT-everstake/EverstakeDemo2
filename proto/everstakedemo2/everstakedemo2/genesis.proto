@@ -1,0 +1,14 @@
+syntax = "proto3";
+package everstake_demo2.everstakedemo2;
+
+import "gogoproto/gogo.proto";
+import "everstakedemo2/everstakedemo2/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "Everstake_demo2/x/everstakedemo2/types";
+
+// GenesisState defines the everstakedemo2 module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
